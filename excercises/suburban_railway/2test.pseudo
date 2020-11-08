@@ -1,0 +1,6 @@
+loop NUM from 0 to 11
+    STATION = STATIONS[NUM]
+    ZONE = TREE.getZone(STATION)
+    LINE = TREE.getLine(STATION)
+    output STATION, "l:", LINE, "z:", ZONE
+end loop
