@@ -1,3 +1,2 @@
 tasks:
   - init: python -m pip install --upgrade pip && pip install git+https://github.com/classroomtechtools/ib_pseudocode_python.git
-  - command: echo done
