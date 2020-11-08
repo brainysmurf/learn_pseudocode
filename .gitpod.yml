@@ -1,0 +1,2 @@
+tasks:
+  - init: pip install git+https://github.com/classroomtechtools/ib_pseudocode_python.git
