@@ -1,0 +1,34 @@
+'''
+CAR PARK
+
+The idea here it to encourage users to keep their cars for either a short amount of time,
+or overnight. The bosses have decided this is the best way to make money. They need a programmer
+to implement their fee structure, which is described below.
+
+Using the concept of abstraction, construct a function that returns the fees given MINUTES. You will need to use abstraction
+to completely understand what your function is supposed to do in all cases:
+
+   - RULES[0][0] value sets how many minutes (X) where fees can be applied until Y is reached
+   - RULES[1][0] is how much the fee is for X minutes (or less)
+   - RULES[2][0] is how much the fine is per minute exceeding X
+   - RULES[1][0] value sets how many minutes (Y) where fees can be applied until Z is reached
+   - RULES[2][0] values sets how many minutes (Z) where fees can be applied, until MAX_CHARGE dollar value is reached
+   - MAX_CHARGE value holds the maximum charge per day
+'''
+
+RULES = Array.from_list([
+    [30,  120,  240],   // time (in minutes)
+    [5,   20,   100],   // base dollars
+    [1,   3,    2]      // fine per minute exceeding (dollars)
+])
+
+MAX_CHARGE = 200  // dollars
+
+'''
+1) Staying in the car park for 40 minutes results in charge of (5 + (1 * 10)) = 15 dollars
+2) Staying in the car park for 125 minutes results in charge of (20 + (3 * 5)) = 35 dollars
+
+Construct an algorithm that takes any input MINUTES and outputs the correct charge.
+
+'''
+

@@ -1,0 +1,37 @@
+'''
+Construct a function that correctly calculates the expected fees, given minutes.
+The function has two parameters: RULES and MINUTES 
+'''
+
+sub CalcFee(RULES, MINUTES)
+
+    if MINUTES == 15 then
+        return 5
+    else if MINUTES == 40 then
+        return 15
+    else if MINUTES == 125 then
+        return 35
+    else if MINUTES == 330 then
+        return 200
+    end if
+
+end sub
+
+
+// don't change this code, this will test it
+
+
+INPUT = [15, 40, 125, 330]
+OUTPUT = [5, 15, 35, 200]
+
+for index, input in enumerate(INPUT):
+
+    expected = OUTPUT[index]
+
+    actual = CalcFee(RULES, input)
+
+    if actual == expected then        
+        print(f"✓ Minutes: {input}, returned: {actual} which is correct!")
+    else
+        print(f"✗ Minutes: {input}, returned: {actual}, should be {expected} :(")
+    end if
