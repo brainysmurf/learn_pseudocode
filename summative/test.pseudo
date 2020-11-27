@@ -1,0 +1,23 @@
+'''
+This will check your work.
+'''
+
+
+INPUT = [15, 40, 125, 330]
+OUTPUT = [5, 15, 35, 200]
+
+IDX = 0
+loop while IDX < 4
+    MINUTES = INPUT[IDX]
+    FEE = OUTPUT[IDX]
+
+    ACTUAL = CalcFee(RULES, MINUTES)
+
+    if ACTUAL == FEE then
+        output "✓ Minutes:", MINUTES, ", returned:", ACTUAL, " which is correct!"
+    else
+        output "✗ Minutes:", MINUTES, ", returned:", ACTUAL, "should be {FEE} :("
+    end if
+
+    IDX += 1
+end loop

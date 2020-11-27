@@ -6,7 +6,7 @@ or overnight. The bosses have decided this is the best way to make money. They n
 to implement their fee structure, which is described below.
 
 Using the concept of abstraction, construct a function that returns the fees given MINUTES. You will need to use abstraction
-to completely understand what your function is supposed to do in all cases:
+in order to create an alorithm that works.
 
    - RULES[0][0] value sets how many minutes (X) where fees can be applied until Y is reached
    - RULES[1][0] is how much the fee is for X minutes (or less)
@@ -19,7 +19,7 @@ to completely understand what your function is supposed to do in all cases:
 RULES = Array.from_list([
     [30,  120,  240],   // time (in minutes)
     [5,   20,   100],   // base dollars
-    [1,   3,    2]      // fine per minute exceeding (dollars)
+    [1,   3,    2]      // fine per minute exceeding (in dollars)
 ])
 
 MAX_CHARGE = 200  // dollars
